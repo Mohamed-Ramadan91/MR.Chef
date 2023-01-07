@@ -11,6 +11,7 @@ myName.onclick = function (event) {
   aboutMe.classList.toggle("show");
 };
 /* =============== ADD Lazy Load Function ===============*/
+/*
 lozad(".lozad", {
   load: function (el) {
     el.src = el.dataset.src;
@@ -19,3 +20,30 @@ lozad(".lozad", {
     };
   },
 }).observe();
+*/
+/* =============== Responsive Menu ===============*/
+let ul = document.querySelector("header nav ul");
+let menu = document.querySelector("header nav i");
+let closeMenu = document.createElement("i");
+closeMenu.className = "ri-close-line";
+menu.onclick = function (event) {
+  ul.classList.toggle("open-menu");
+  if (ul.classList.contains("open-menu")) {
+    ul.prepend(closeMenu);
+  } else {
+    closeMenu.remove();
+  }
+};
+closeMenu.onclick = function (event) {
+  ul.classList.toggle("open-menu");
+};
+links.forEach(function (li) {
+  li.addEventListener("click", function (event) {
+    if (window.matchMedia("(max-width: 767px)").matches === true)
+      ul.classList.toggle("open-menu");
+  });
+});
+
+/*
+<i class="ri-close-line"></i>
+*/
