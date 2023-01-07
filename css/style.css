@@ -481,6 +481,11 @@ footer span {
   font-weight: bold;
   cursor: pointer;
 }
+@media (max-width: 400px) {
+  footer {
+    font-size: 14px;
+  }
+}
 
 .about-me {
   background-color: #ddd;
