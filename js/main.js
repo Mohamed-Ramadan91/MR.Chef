@@ -10,17 +10,6 @@ let myName = document.querySelector("footer span");
 myName.onclick = function (event) {
   aboutMe.classList.toggle("show");
 };
-/* =============== ADD Lazy Load Function ===============*/
-/*
-lozad(".lozad", {
-  load: function (el) {
-    el.src = el.dataset.src;
-    el.onload = function () {
-      el.classList.add("fade");
-    };
-  },
-}).observe();
-*/
 /* =============== Responsive Menu ===============*/
 let ul = document.querySelector("header nav ul");
 let menu = document.querySelector("header nav i");
@@ -44,6 +33,14 @@ links.forEach(function (li) {
   });
 });
 
+/* =============== ADD Lazy Load Function ===============*/
 /*
-<i class="ri-close-line"></i>
+lozad(".lozad", {
+  load: function (el) {
+    el.src = el.dataset.src;
+    el.onload = function () {
+      el.classList.add("fade");
+    };
+  },
+}).observe();
 */
